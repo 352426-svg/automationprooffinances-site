@@ -1,129 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Automation-Proof Finances — 2025 Guide</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automation-Proof Finances</title>
   <style>
-    :root{
-      --bg:#0c1724;
-      --panel:#0f2031;
-      --panel-2:#0d1b2b;
-      --ink:#e8f6f6;
-      --ink-dim:#a8c4c8;
-      --brand:#58e3d7;
-      --ring:rgba(88,227,215,.35);
-      --shadow:rgba(0,0,0,.35);
-      --muted:rgba(255,255,255,.08);
-      --accent:#102d40;
+    body {
+      margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:radial-gradient(1200px 800px at 20% -10%, #12304a 0%, var(--bg) 55%, #0a1320 100%); color:var(--ink); font-family:Inter,system-ui,Arial,Helvetica,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1024px;margin:0 auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:36px;height:36px;border-radius:10px;background:#0fe; color:#012; font-weight:800; display:grid; place-items:center}
-    .brand h1{font-size:18px;line-height:1.1;margin:0;font-weight:800;letter-spacing:.2px}
-    .nav{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:14px 18px;border-radius:14px;border:1px solid var(--muted);background:linear-gradient(180deg,var(--panel),var(--panel-2));color:var(--ink);font-weight:700;box-shadow:0 10px 25px -10px var(--shadow)}
-    .btn:hover{border-color:rgba(255,255,255,.15)}
-    .btn.primary{background:var(--brand); color:#022; border-color:transparent; box-shadow:0 16px 40px -12px var(--ring)}
-    .hero{margin-top:14px;padding:28px;border-radius:24px;background:linear-gradient(160deg,rgba(60,120,160,.15),transparent 55%),linear-gradient(180deg, var(--panel), var(--panel-2)); box-shadow:inset 0 0 0 1px var(--muted), 0 30px 60px -30px var(--shadow)}
-    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
-    .eyebrow{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--ink-dim);font-weight:600}
-    h2{font-size:42px;line-height:1.05;margin:14px 0 10px}
-    .lead{color:var(--ink-dim);font-size:18px;line-height:1.6;margin:12px 0 22px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .note{color:var(--ink-dim);font-size:14px;margin-top:12px}
-    .cover{border-radius:22px;background:linear-gradient(180deg, #0f2235, #0b1827);padding:14px; box-shadow:inset 0 0 0 1px var(--muted), 0 20px 50px -24px var(--shadow)}
-    .cover-inner{position:relative;border-radius:14px;background:linear-gradient(180deg,#03101d,#071524);box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);overflow:hidden;padding:16px}
-    .poster{
-      width:100%;
-      aspect-ratio:3/4;
-      border-radius:10px;
-      object-fit:cover;
-      object-position:center;
-      display:block;
-      background:#04121e;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #0f0f0f;
+      border-bottom: 1px solid #222;
     }
-    .cap{margin:10px 2px 0;color:var(--brand);font-weight:700;opacity:.9}
-    section{margin:28px auto 0;max-width:1024px}
-    .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border-radius:22px;padding:22px;box-shadow:inset 0 0 0 1px var(--muted),0 30px 60px -34px var(--shadow)}
-    .h3{font-size:28px;margin:0 0 10px}
-    p{color:var(--ink-dim);line-height:1.7;margin:0 0 12px}
-    ul{margin:8px 0 0 18px;color:var(--ink-dim);line-height:1.7}
-    li+li{margin-top:6px}
-    footer{opacity:.75;font-size:13px;text-align:center;margin:26px 0 36px}
-    @media (max-width:900px){
-      .grid{grid-template-columns:1fr;gap:22px}
-      h2{font-size:34px}
-      .hero{padding:22px}
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffcc33;
+      margin: 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: #000;
+      background: #ffcc33;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      transition: 0.25s;
+    }
+
+    .buttons a.secondary {
+      background: transparent;
+      color: #ffcc33;
+      border: 1px solid #ffcc33;
+    }
+
+    .buttons a:hover {
+      opacity: 0.85;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ffcc33;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 1.5rem;
+    }
+
+    img.cover {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+      margin: 1.5rem 0 2rem 0;
+    }
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .cta a {
+      text-decoration: none;
+      padding: 0.9rem 1.75rem;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: 0.25s;
+    }
+
+    .cta a.primary {
+      background: #ffcc33;
+      color: #000;
+    }
+
+    .cta a.secondary {
+      background: transparent;
+      border: 1px solid #ffcc33;
+      color: #ffcc33;
+    }
+
+    .cta a:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 1.5rem;
+      color: #888;
+      font-size: 0.85rem;
     }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">AP</div>
-        <h1>Automation-Proof<br>Finances</h1>
-      </div>
-      <nav class="nav">
-        <a class="btn" href="#inside">What’s inside</a>
-        <a class="btn primary" href="#download">Get the Free Guide</a>
-      </nav>
-    </header>
+  <header>
+    <h1>Automation-Proof Finances</h1>
+    <div class="buttons">
+      <a href="#guide" class="secondary">What’s Inside</a>
+      <a href="#download">Get the Guide</a>
+    </div>
+  </header>
 
-    <main class="hero">
-      <div class="grid">
-        <div>
-          <span class="eyebrow">Free Report • 2025 Edition</span>
-          <h2>Make Your Money<br><span style="color:var(--brand)">Automation-Proof</span></h2>
-          <p class="lead">
-            The biggest wealth shift in a generation is already here. AI doesn’t take breaks — so your plan can’t either.
-            Grab the playbook to protect cashflow, build buffers, and keep your edge as systems change.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary" id="download" href="APF_2025_Guide.pdf">Download the Free 2025 Guide</a>
-            <a class="btn" href="mailto:hello@automationprooffinances.com?subject=Updates">Get Updates by Email</a>
-          </div>
-          <div class="note">Instant access. No fluff, no spam.</div>
-        </div>
+  <main>
+    <h2>Make Your Money Automation-Proof</h2>
+    <p>
+      The rise of AI and automation could destabilize entire job sectors, leaving millions struggling to pay rent and feed their families. 
+      If you’re scared, you’re paying attention.
+    </p>
 
-        <aside class="cover">
-          <div class="cover-inner">
-            <img class="poster" src="./assets/apf-cover-2025.jpg" alt="Automation-Proof Finances — 2025 Guide cover">
-          </div>
-          <div class="cap">Automation-Proof Finances — 2025 Guide</div>
-        </aside>
-      </div>
-    </main>
+    <img src="assets/apf-cover-2025.JPG" alt="Automation-Proof Finances — 2025 Guide" class="cover" />
 
-    <section id="inside">
-      <div class="card">
-        <h3 class="h3">The wealth shift has started — here’s how you get on the right side of it</h3>
-        <p>This guide keeps the urgency high and the actions simple. You’ll learn what to focus on for the next 30–90 days and the safeguards to put in place for the next year.</p>
-        <ul>
-          <li><strong>Income defense:</strong> reduce single-source risk and add AI-resilient streams.</li>
-          <li><strong>Cashflow moat:</strong> buffers, automation, and high-signal tracking.</li>
-          <li><strong>Opportunity ladder:</strong> when to upskill, when to delegate, when to invest.</li>
-        </ul>
-      </div>
-    </section>
+    <div class="cta" id="download">
+      <a href="AutomationProofFinances2025.pdf" class="primary">📘 Download the Free 2025 Guide</a>
+      <a href="#subscribe" class="secondary">Get Updates by Email</a>
+      <p style="color:#aaa; font-size:0.9rem;">Instant access. No fluff. No spam.</p>
+    </div>
 
-    <section>
-      <div class="card">
-        <h3 class="h3">Who this is for</h3>
-        <p>Solo operators, small teams, and households who want a fast, practical plan to stay ahead of automation rather than react to it.</p>
-      </div>
-    </section>
+    <h3 style="color:#ffcc33;">The Wealth Shift Has Already Begun — Don’t Be a Bystander</h3>
+    <p>
+      Automation isn’t coming — it’s here. From self-checkout to AI copilots, entire industries are changing overnight. 
+      This guide shows you how to stay ahead while others fall behind.
+    </p>
 
-    <footer>
-      © 2025 Automation-Proof Finances • <a href="mailto:hello@automationprooffinances.com">Contact</a>
-    </footer>
-  </div>
+    <p>
+      Inside, you’ll find five battle-tested steps to make yourself financially resilient, no matter how fast technology moves.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Automation-Proof Finances · For educational purposes only · Not financial advice.</p>
+  </footer>
 </body>
 </html>
